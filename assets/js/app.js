@@ -8,8 +8,7 @@
   const ctx = canvas.getContext('2d')
   
   let isLoadedMetaData = false
-//   let constraints = {audio: false, video: {}}
-  let constraints = {audio: false, video: true}
+  let constraints = {audio: false, video: {facingMode: 'user'}}
 
   function start(){
     navigator.mediaDevices.getUserMedia( constraints )
@@ -80,7 +79,7 @@
 
   frontBtn.addEventListener('click', () => {
     stop()
-    constraints.video.facingMode = { exact: 'user' }
+    constraints.video.facingMode = 'user'
     setTimeout( () => {
       start()
     }, 500)
@@ -88,7 +87,7 @@
 
   rearBtn.addEventListener('click', () => {
     stop()
-    constraints.video.facingMode = { exact: 'environment' }
+    constraints.video.facingMode = 'environment'
     setTimeout( () => {
       start()
     }, 500)
