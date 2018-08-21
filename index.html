@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QR code scanner with jsQR | Recognition</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+
+    <main>
+      <div class="content">
+        <canvas id="canvas"></canvas>
+
+        <!-- videoタグはautoplay属性を付与しないと表示されない -->
+        <video src="" id="video" playsinline autoplay></video>
+      </div>
+
+      <div class="output">
+        <p class="output_txt"></p>
+      </div>      
+
+      <div class="controls">
+        <button id="stop" class="btn">STOP</button>
+        <button id="front" class="btn">FRONT</button>
+        <button id="rear" class="btn">REAR</button>
+      </div>
+    </main>
+    
+    <script defer async src="./assets/js/libs/jsQR.js"></script>
+    <script defer async src="./assets/js/app.js"></script>
+  </body>
+</html>
