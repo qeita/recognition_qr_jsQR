@@ -8,7 +8,8 @@
   const ctx = canvas.getContext('2d')
   
   let isLoadedMetaData = false
-  let constraints = {audio: false, video: {}}
+//   let constraints = {audio: false, video: {}}
+  let constraints = {audio: false, video: true}
 
   function start(){
     navigator.mediaDevices.getUserMedia( constraints )
