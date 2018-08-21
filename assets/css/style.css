@@ -1,3 +1,9 @@
+main{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .content{
   display: flex;
   justify-content: center;
@@ -22,6 +28,14 @@
 .controls{
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 640px){
+  .controls{
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+  }  
 }
 
 .btn{
